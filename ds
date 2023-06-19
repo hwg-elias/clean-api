@@ -1,0 +1,449 @@
+[33mcommit 5e8abea13a59be5855f4d277c47fa2a1e59075ca[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 19 13:36:24 2023 -0300
+
+    fix: remove useless files
+
+[33mcommit 7dc631ab965996e659082eabe391a101132367df[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 19 12:39:43 2023 -0300
+
+    fix: elint dependencies bug fixed
+
+[33mcommit cc2441ab37ab829014fb36139bc3dbf51d120d07[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 19 12:38:38 2023 -0300
+
+    test: ensure BcryptAdapter calls bcrypt with correct values
+
+[33mcommit ba6431e33e96802acad90979fd2011dd00988eba[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 19 12:38:01 2023 -0300
+
+    feat: ensure BcryptAdapter calls bcrypt with correct values
+
+[33mcommit 38b35af376c820807a03bfd6fea6417cb37265f7[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 19 12:32:23 2023 -0300
+
+    refactor: remove useless file
+
+[33mcommit 976f50c9ad2d9c367569164b743bc9017cc4f6bf[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 19 12:29:19 2023 -0300
+
+    refactor: use bcryptjs instead of bcrypt
+
+[33mcommit f9e993899e6ab9abe200b69d34e28a75cb69136b[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 19:53:17 2023 -0300
+
+    test: ensure DbAddAccount returns an account on success
+
+[33mcommit 95a4ead5db59fde1bb2180d788e4f8220f422645[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 19:51:09 2023 -0300
+
+    feat: ensure DbAddAccount returns an account on success
+
+[33mcommit de3e2fca12ca754e0b9f046af5cff5edb1d06466[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 19:44:35 2023 -0300
+
+    test: ensure DbAddAccount throws if AddAccountRepository throws
+
+[33mcommit 1190f0425bd54188f95c833217266a50f5d733dd[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 19:40:13 2023 -0300
+
+    test: ensure DbAddAccount call AddAccountRepository with correct values
+
+[33mcommit 3e5b2876923e352da19a2638bd80bb957fb19126[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 19:39:18 2023 -0300
+
+    feat: ensure DbAddAccount call AddAccountRepository with correct values
+
+[33mcommit 73cab8c4d156c7ed4ee5f2803b77585204570d86[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 16:19:16 2023 -0300
+
+    refactor: group all protocols to a sigle file
+
+[33mcommit 1d787b3eb4499db47a6f2eddc002bf1e98fffb95[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 15:41:35 2023 -0300
+
+    test: ensure DbAddAccount throws if Encrypter throws
+
+[33mcommit 2bdd52c27e781836e7a55f04543245f1060040da[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 15:03:30 2023 -0300
+
+    refactor: move encrypter creation to a factory helper method
+
+[33mcommit 501d98087d42ab56715428cba29e06a154c821e6[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 14:41:37 2023 -0300
+
+    refactor: move sut creation to a factory helper method
+
+[33mcommit c6802db9a9131c5bef5e164a99673d160aa80004[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 14:26:26 2023 -0300
+
+    test: ensure DbAddAccount calls Encrypter with correct password
+
+[33mcommit e834665473ebd5ccd57e5402c9630fcf32d07725[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 15 14:25:45 2023 -0300
+
+    feat: ensure DbAddAccount calls Encrypter with correct password
+
+[33mcommit a49e9a9b8905638eed4110d0cd771829c34f8ef6[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 15:28:49 2023 -0300
+
+    refactor: change file name
+
+[33mcommit 10301c8cd10392eddc78858f47908c23704b1554[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 15:27:34 2023 -0300
+
+    refactor: move sut creation to a factory helper method
+
+[33mcommit 361315302cbdc107822384e397e8265676312b20[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 15:24:19 2023 -0300
+
+    test: ensure EmailValidatorAdapter calls validator with correct email
+
+[33mcommit 86768e62bdfe096bddabcd985f94d56573ba5b74[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 15:20:06 2023 -0300
+
+    test: ensure EmailValidatorAdapter returns true if validator returns true
+
+[33mcommit b1230643f2d0357493367305bc3c456f286aea57[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 15:19:35 2023 -0300
+
+    feat: ensure EmailValidatorAdapter returns true if validator returns true
+
+[33mcommit 12d37f55c92c24d3e900b06219fcf1282b3104ec[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 15:06:48 2023 -0300
+
+    test: ensure EmailValidatorAdapter returns false if validator returns false
+
+[33mcommit 49e7770d96eeb580c010f80a9f2c259499f3d95e[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 15:06:19 2023 -0300
+
+    feat: ensure EmailValidatorAdapter returns false if validator returns false
+
+[33mcommit 789644c5b5dd97cadf8b927df27f5f3871ea69ce[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 14:51:41 2023 -0300
+
+    chore: add jest configs and scripts
+
+[33mcommit 219023f1b6ea42cca4a592b54dbab722a0ce4ff8[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 14:28:56 2023 -0300
+
+    refactor: change .ts to .js jest.config
+
+[33mcommit c831cb36fa4974d4df56d03bb079b7f324f41e2e[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 14:14:55 2023 -0300
+
+    refactor: change import
+
+[33mcommit 48fb6c52d91d82f46fce77cf35acf291702d1a28[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 14:11:39 2023 -0300
+
+    refactor: transforme handle to async
+
+[33mcommit b55e1224f9702f788d2c194d02ac2f028651cb9b[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 13:59:54 2023 -0300
+
+    refactor: move success http response to a helper method
+
+[33mcommit 06069933d7a30d8bf128d2a112f2cb6ce98fb8d4[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 13:51:47 2023 -0300
+
+    test: ensure SignUpController returns 200 if valid data is provided
+
+[33mcommit 4a0db6c4871698b804d1ee40b1096a6c46d72c63[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 13:41:53 2023 -0300
+
+    feat: ensure SignUpController returns 200 if valid data is provided
+
+[33mcommit 5a37506ad32ba746a78b91dc2810e3613f0a5294[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 13:35:43 2023 -0300
+
+    test: ensure SignUpController returns 500 if AddAccount throws
+
+[33mcommit 194d7ffdfb9b7c414592227c8e152558016da286[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 13:32:33 2023 -0300
+
+    refactor: move all signup protocols to a single file
+
+[33mcommit 4fe67007f777a2e03886f7a623f005d0f13ecc5a[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 13:26:35 2023 -0300
+
+    test: ensure SignUpController calls AddAccount with correct values
+
+[33mcommit cc9f96c25b6e2682a0c572004cc177bf0d0a3050[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 13 13:24:37 2023 -0300
+
+    feat: ensure SignUpController calls AddAccount with correct values
+
+[33mcommit 168761e96a1295d4327461c7fed55c8af29eb903[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 16:53:32 2023 -0300
+
+    refactor: remove code duplication
+
+[33mcommit 7bc6b88884ee79be12f5dbc4fc4f715c0aca11d7[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:58:00 2023 -0300
+
+    test: ensure SignUpController returns 500 if passwordConfirmation fails
+
+[33mcommit 86c36ac7b994493dcfd0bc995f772a44bea33e88[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:57:30 2023 -0300
+
+    feat: ensure SignUpController returns 500 if passwordConfirmation fails
+
+[33mcommit 553488652814bdcbcf6c564b288b4b54e9696af2[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:50:35 2023 -0300
+
+    refactor: change mocking strategy
+
+[33mcommit be13eb7f0c717a9168cf08a88a75b248e5f27d3d[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:33:55 2023 -0300
+
+    refactor: move EmailValidator creation to a factory helper method
+
+[33mcommit f2bbd35c386605b006fb6f1d1830acd11ab5e436[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:28:13 2023 -0300
+
+    refactor: move all protocol imports to a single file
+
+[33mcommit 50f3d193e97756122c5155737868f8240616d612[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:25:09 2023 -0300
+
+    refactor: move all error imports to a single file
+
+[33mcommit 74a9eca3c86bd0790c626067d2a87d60945afd30[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:21:05 2023 -0300
+
+    refactor: move server error to a helper method
+
+[33mcommit 7ee73985206b09151de9e6f5cf03ade431aaafe7[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:18:12 2023 -0300
+
+    test: ensure SignUpController returns 500 if EmailValidator throws
+
+[33mcommit 66ad77af0454de230bb4ec680769ad7eb734340d[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:17:42 2023 -0300
+
+    feat: ensure SignUpController returns 500 if EmailValidator throws
+
+[33mcommit 8ea815a78bc972a934af4ef9d240bda6f0fa9916[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:17:27 2023 -0300
+
+    fix: rule required strict at .eslintrc removed
+
+[33mcommit 1d0378d878786e593fa3d5b1e2104df7a6c19482[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:13:53 2023 -0300
+
+    fix: remove strict param at tsconfig
+
+[33mcommit d3019a4bc83a1a9a7e21b8111658a580e1ca7b17[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 15:01:05 2023 -0300
+
+    test: ensure SignUpController calls EmailValidator with correct email
+
+[33mcommit d4fb31049d9077f1aeae3f97058860ed8c3ccc56[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 14:45:47 2023 -0300
+
+    test: ensure SignUpController returns 400 if an invalid email is provided
+
+[33mcommit 00f16e856108eb8c2bcbb68de441010ec1a82f67[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 14:45:20 2023 -0300
+
+    feat: ensure SignUpController returns 400 if an invalid email is provided
+
+[33mcommit 270043254e76557c2c33b9a315cc4ef9ab652108[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 12 13:50:59 2023 -0300
+
+    refactor: move sut creation to a factory helper method
+
+[33mcommit 63d9a2648d0887b342b78d89a3b063fcf845c483[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Fri Jun 9 16:56:44 2023 -0300
+
+    refactor: make SignUpController conforms to a protocol
+
+[33mcommit 6a21d1cfecee4dda4ab5a6145e0677468e0cd4e4[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Fri Jun 9 16:23:42 2023 -0300
+
+    test: ensure SignUpController returns 400 if no passwordConfirmation provided
+
+[33mcommit fe86dd6cf6efdf8a77e4229ed549d230e2115b2f[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Fri Jun 9 14:53:42 2023 -0300
+
+    refactor: simplify code
+
+[33mcommit 17786e6cdc26e0bfd4d4bed75f4b11bd08dace79[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Fri Jun 9 14:47:45 2023 -0300
+
+    refactor: move duplicated code to a helper method
+
+[33mcommit 3998cee1019646934fe65bcee5ef14b3001a7e46[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 8 16:48:14 2023 -0300
+
+    refactor: change indentation
+
+[33mcommit 0438df64ab09a02b3bd42e48e9a6de96a6de0309[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 8 16:46:44 2023 -0300
+
+    fix: eslint bug fix
+
+[33mcommit 1383e9d81d644c1c4a56299f778347fb7989081b[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Thu Jun 8 16:34:50 2023 -0300
+
+    refactor: move sut creation to a factory method
+
+[33mcommit 73a04c13a82fd4c9b7afc958ed03f5e31395e678[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 18:33:59 2023 -0300
+
+    fix: husky commit checks
+
+[33mcommit e5cd04f35ffc4d88741f1793099792c9a1a93e30[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 18:26:21 2023 -0300
+
+    refactor: ignore
+
+[33mcommit 02a349bf954e1896afa1cbfddef9b08f6a9d1ec4[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 16:55:23 2023 -0300
+
+    fix: ensure husky work well
+
+[33mcommit 56bc652eeeed7716d395f941528f741f248aa6d3[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 16:43:47 2023 -0300
+
+    refactor: add customized error for missing param
+
+[33mcommit 274d8c73e635841ac9e9933824212ecfa733440b[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 16:36:17 2023 -0300
+
+    refactor: ensure SignUpController.handle implement correct interfaces
+
+[33mcommit fb482800d249d765771f9d9d63b807a9bd18941a[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 15:18:36 2023 -0300
+
+    test: ensure SignUpController returns 400 if no email is provided
+
+[33mcommit 37ed521aef4bba358e16dbf39893c776065079fe[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 15:18:20 2023 -0300
+
+    feat: ensure SignUpController returns 400 if no email is provided
+
+[33mcommit 8c584560820563d20b341dbe58f5dce6a5cdecf6[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 15:03:22 2023 -0300
+
+    test: ensure SignUpController return an error if no name is provided
+
+[33mcommit 77f0a1a54a709efce954762809887b4ce8ff8657[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 15:03:03 2023 -0300
+
+    feat: ensure SignUpController return an error if no name is provided
+
+[33mcommit 6562e1fa35c765a41113aad700e7145c4d512ec8[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 14:55:58 2023 -0300
+
+    test: ensure SignUpController returns 400 if no name is provided
+
+[33mcommit 0d90beb19b9badf5d5e8a1c5b1e3050ac821c3c2[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 14:43:19 2023 -0300
+
+    feat: ensure SignUpController returns 400 if no name is provided
+
+[33mcommit c5e55fe593bcd009d0c215aad962311e09de2517[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Tue Jun 6 13:44:37 2023 -0300
+
+    chore: add jest to lint staged
+
+[33mcommit ac19b2cad4d05d369faa3a198bae4299e94520ba[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 5 19:10:45 2023 -0300
+
+    chore: add jest
+
+[33mcommit 8c441b9dcc36c9ee5581451e9ec7bd369ba015a0[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 5 18:15:17 2023 -0300
+
+    chore: add husky and lint-staged
+
+[33mcommit 4e2af43fe71763e6e70da87f2414567d2562a568[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 5 18:09:00 2023 -0300
+
+    chore: eslint
+
+[33mcommit 3ce63ea0a6f0d8b013834a4ecfd19347aad5d71f[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 5 15:25:17 2023 -0300
+
+    chore: add typescript
+
+[33mcommit 681275f1a8a9239c349cc7a0efa9818440b9632c[m
+Author: Gabriel Elias <77940881+helayas@users.noreply.github.com>
+Date:   Mon Jun 5 15:16:04 2023 -0300
+
+    chore: add commit linter
