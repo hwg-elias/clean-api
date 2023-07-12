@@ -3,12 +3,6 @@ import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
 import { EmailValidator, AddAccount, AddAccountModel, AccountModel, HttpRequest } from './signup-protocols'
 import { ok, serverError, badRequest } from '../../helpers/http-helper'
 
-interface SutTypes {
-  sut: SignUpController
-  emailValidatorStub: EmailValidator
-  addAccountStub: AddAccount
-}
-
 const makeFakeRequest = (): HttpRequest => ({
   body: {
     name: 'any_name',
@@ -44,6 +38,12 @@ const makeFakeAccount = (): AccountModel => ({
   password: 'valid_password'
 
 })
+
+interface SutTypes {
+  sut: SignUpController
+  emailValidatorStub: EmailValidator
+  addAccountStub: AddAccount
+}
 
 const makeSut = (): SutTypes => {
   const emailValidatorStub = makeEmailValidator()
