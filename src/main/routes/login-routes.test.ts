@@ -33,7 +33,7 @@ describe('Login Routes', () => {
   })
 
   describe('POST /login', () => {
-    test('Should return hçsajklçhfsaklçijhfshfajkslfhkjls on login', async () => {
+    test('Should return 200 on login', async () => {
       const password = await hash('123', 12)
       await accountCollection.insertOne({
         name: 'Yasmin Paulina',

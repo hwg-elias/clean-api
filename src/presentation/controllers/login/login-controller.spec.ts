@@ -84,7 +84,7 @@ describe('Login Controller', () => {
     expect(httpResponse).toEqual(ok({ accessToken: 'any_token' }))
   })
 
-  test('Should call Validation with correct value', async () => {
+  test('Should call Validation with correct values', async () => {
     const { sut, validationStub } = makeSut()
     const validateSpy = jest.spyOn(validationStub, 'validate')
     const httpRequest = makeFakeRequest()
