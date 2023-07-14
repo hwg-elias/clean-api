@@ -7,7 +7,7 @@ import { LogMongoRepository } from '../../../infra/db/mongodb/log/log-mongo-repo
 import { AccountMongoRepository } from '../../../infra/db/mongodb/account/account-mongo-repository'
 import { BcryptAdapter } from '../../../infra/cryptography/bcrypt-adapter/bcrypt-adapter'
 import { JwtAdapter } from '../../../infra/cryptography/jwt-adapter/jwt-adapter'
-import { env } from 'process'
+import env from '../../config/env'
 
 export const makeLoginController = (): Controller => {
   const salt = 12
