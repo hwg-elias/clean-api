@@ -2,7 +2,7 @@ import request from 'supertest'
 import app from '../config/app'
 import { MongoHelper } from '../../infra/db/mongodb/helpers/mongo-helper'
 
-describe('CORS Middleware', () => {
+describe('Login Routes', () => {
   beforeAll(async () => {
     await MongoHelper.connect(process.env.MONGO_URL)
   })
@@ -14,15 +14,17 @@ describe('CORS Middleware', () => {
     await accountCollection.deleteMany({})
   })
 
-  test('Should return an account on success', async () => {
-    await request(app)
-      .post('/api/signup')
-      .send({
-        name: 'Yasmin Paulina',
-        email: 'paulina.yasminica@gmail.com',
-        password: '123',
-        passwordConfirmation: '123'
-      })
-      .expect(200)
+  describe('POST /signup', () => {
+    test('Should return an 200 on signup', async () => {
+      await request(app)
+        .post('/api/signup')
+        .send({
+          name: 'Yasmin Paulina',
+          email: 'paulina.yasminica@gmail.com',
+          password: '123',
+          passwordConfirmation: '123'
+        })
+        .expect(200)
+    })
   })
 })
