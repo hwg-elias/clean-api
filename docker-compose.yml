@@ -3,21 +3,21 @@ services:
   api:
     container_name: api_container
     image: node:14
-    working_dir: /usr/src/clean-typescript-api
+    working_dir: /usr/src/clean-api
     restart: always
-    command: bash -c "npm install --only=prod && npm run debug"
+    command: bash -c "npm install --omit=dev --legacy-peer-deps && npm run debug"
     environment:
       - PORT=5050
-      - MONGO_URL=mongodb://mongo:27017/clean-typescript-api
+      - MONGO_URL=mongodb://mongo:27017/clean-api
       - JWT_SECRET_KEY="99sd))_-"
     volumes:
-      - ./dist/:/usr/src/clean-typescript-api/dist/
-      - ./package.json:/usr/src/clean-typescript-api/package.json
+      - ./dist/:/usr/src/clean-api/dist/
+      - ./package.json:/usr/src/clean-api/package.json
     ports:
       - '5050:5050'
       - '9222:9222'
     networks:
-      - clean-typescript-api
+      - clean-api
  
   mongo:
     container_name: mongo_container
@@ -28,10 +28,10 @@ services:
     ports:
       - '27017:27017'
     networks:
-      - clean-typescript-api
+      - clean-api
  
 networks:
-  clean-typescript-api:
+  clean-api:
  
 volumes:
   mongodb:
