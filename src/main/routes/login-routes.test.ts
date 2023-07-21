@@ -11,12 +11,12 @@ describe('Login Routes', () => {
   beforeAll(async () => {
     await MongoHelper.connect(env.mongoUrl)
   })
-  afterAll(async () => {
-    await MongoHelper.disconnect()
-  })
   beforeEach(async () => {
     accountCollection = await MongoHelper.getCollection('accounts')
     await accountCollection.deleteMany({})
+  })
+  afterAll(async () => {
+    await MongoHelper.disconnect()
   })
 
   describe('POST /signup', () => {

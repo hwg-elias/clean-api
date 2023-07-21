@@ -11,7 +11,7 @@ export default {
   coverageProvider: 'v8',
   preset: '@shelf/jest-mongodb',
   testEnvironment: 'node',
-  testMatch: ['**/*.spec.ts'],
+  testMatch: [`**/*.spec.ts`, `**/*.test.ts`],
   transform: {
     '.+\\.ts$': 'ts-jest'
   },
