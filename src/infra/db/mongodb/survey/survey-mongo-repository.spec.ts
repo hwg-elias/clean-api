@@ -5,7 +5,7 @@ import env from '../../../../main/config/env'
 import { AddSurveyModel } from '../../../../domain/usecases/add-survey'
 
 let surveyColletion: Collection
-describe('Account Mongo Repository', () => {
+describe('Survey Mongo Repository', () => {
   beforeAll(async () => {
     await MongoHelper.connect(env.mongoUrl)
   })
