@@ -1,7 +1,7 @@
-import bcrypt from 'bcryptjs'
+import bcrypt from 'bcrypt'
 import { BcryptAdapter } from './bcrypt-adapter'
 
-jest.mock('bcryptjs', () => ({
+jest.mock('bcrypt', () => ({
   async hash (): Promise<string> {
     return await new Promise(resolve => { resolve('hash') })
   },
