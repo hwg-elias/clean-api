@@ -4,6 +4,3 @@
   script:
     - eslint 'src/**'
     - npm run test:coveralls
-  cache:
-    npm: false
-
