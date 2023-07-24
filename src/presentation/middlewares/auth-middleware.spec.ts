@@ -5,7 +5,6 @@ import { LoadAccountByToken, HttpRequest, AccountModel } from './auth-middleware
 
 const makeLoadAccountByTokenStub = (): LoadAccountByToken => {
   class LoadAccountByTokenStub implements LoadAccountByToken {
-    add: (accessToken: string, role?: string | undefined) => Promise<AccountModel | null>
     async load (accessToken: string, role?: string): Promise<AccountModel | null> {
       return await new Promise(resolve => resolve(makeFakeAccount()))
     }
