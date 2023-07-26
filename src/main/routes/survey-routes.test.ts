@@ -1,4 +1,3 @@
-import { AddSurveyModel } from '../../domain/usecases/add-survey'
 import { MongoHelper } from '../../infra/db/mongodb/helpers/mongo-helper'
 import app from '../config/app'
 import env from '../config/env'
@@ -31,18 +30,6 @@ describe('Survey Routes', () => {
         .expect(403)
     })
   })
-  const makeFakeSurveyRequest = (): AddSurveyModel => ({
-    question: 'any_question',
-    answers: [
-      {
-        image: 'http://image-name.com',
-        answer: 'answer 1'
-      },
-      {
-        answer: 'answer 2'
-      }
-    ]
-  })
 
   test('Should return 204 on success', async () => {
     const res = await accountCollection.insertOne({
@@ -53,17 +40,26 @@ describe('Survey Routes', () => {
     })
     const id = res.insertedId
     const accessToken = sign({ id }, env.jwtSecret)
-
     await accountCollection.updateOne({ _id: id }, {
       $set: {
         accessToken
       }
     })
-
     await request(app)
       .post('/api/surveys')
       .set('x-access-token', accessToken)
-      .send(makeFakeSurveyRequest())
+      .send({
+        question: 'any_question',
+        answers: [
+          {
+            image: 'http://image-name.com',
+            answer: 'answer 1'
+          },
+          {
+            answer: 'answer 2'
+          }
+        ]
+      })
       .expect(204)
   })
 })
