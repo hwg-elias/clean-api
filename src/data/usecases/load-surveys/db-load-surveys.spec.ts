@@ -46,10 +46,16 @@ const makeSut = (): SutTypes => {
   }
 }
 describe('DbLoadSurveys', () => {
-  test('Should call LoadSurveysRepository', async () => {
+  test('Should return a list of surveys on success', async () => {
     const { sut, loadSurveysRepositoryStub } = makeSut()
     const loadAllSpy = jest.spyOn(loadSurveysRepositoryStub, 'loadAll')
     await sut.load()
     expect(loadAllSpy).toHaveBeenCalled()
+  })
+
+  test('Should return a list of surveys on success', async () => {
+    const { sut } = makeSut()
+    const surveys = await sut.load()
+    expect(surveys).toEqual(makeFakeSurveys())
   })
 })
