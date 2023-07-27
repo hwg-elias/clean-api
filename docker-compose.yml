@@ -2,7 +2,7 @@ version: '3'
 services:
   api:
     container_name: api_container
-    image: node:12
+    image: node:14
     working_dir: /usr/src/clean-api
     restart: always
     command: bash -c "npm install --omit=dev --legacy-peer-deps && npm run debug"
