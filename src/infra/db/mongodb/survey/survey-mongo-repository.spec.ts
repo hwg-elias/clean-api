@@ -3,6 +3,7 @@ import { MongoHelper } from '../helpers/mongo-helper'
 import { SurveyMongoRepository } from './survey-mongo-repository'
 import env from '../../../../main/config/env'
 import { AddSurveyModel } from '../../../../domain/usecases/add-survey'
+import MockDate from 'mockdate'
 
 let surveyColletion: Collection
 
@@ -26,9 +27,11 @@ const makeSut = (): SurveyMongoRepository => {
 describe('Survey Mongo Repository', () => {
   beforeAll(async () => {
     await MongoHelper.connect(env.mongoUrl)
+    MockDate.set(new Date())
   })
   afterAll(async () => {
     await MongoHelper.disconnect()
+    MockDate.reset()
   })
   beforeEach(async () => {
     surveyColletion = await MongoHelper.getCollection('surveys')
@@ -41,6 +44,39 @@ describe('Survey Mongo Repository', () => {
       await sut.add(makeFakeSurveyData())
       const survey = await surveyColletion.findOne({ question: 'any_question' })
       expect(survey).toBeTruthy()
+    })
+  })
+  describe('loadAll()', () => {
+    test('Should load all surveys on success', async () => {
+      await surveyColletion.insertMany([{
+        question: 'any_question',
+        answers: [
+          {
+            image: 'any_image',
+            answer: 'any_answer'
+          }
+        ],
+        date: new Date()
+      },
+      {
+        question: 'other_question',
+        answers: [
+          {
+            image: 'other_image',
+            answer: 'other_answer'
+          },
+          {
+            answer: 'another_answer'
+          }
+        ],
+        date: new Date()
+      }])
+
+      const sut = makeSut()
+      const survey = await sut.loadAll()
+      expect(survey.length).toBe(2)
+      expect(survey[0].question).toBe('any_question')
+      expect(survey[1].question).toBe('other_question')
     })
   })
 })
