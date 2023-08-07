@@ -1,7 +1,7 @@
-import { LoadAccountByTokenRepository } from '../../../data/protocols/db/account/load-account-by-token-repository'
-import { AccountModel } from '../../../domain/models/account'
-import { LoadAccountByToken } from '../../../domain/usecases/load-account-by-token'
-import { Decrypter } from '../../protocols/criptography/decrypter'
+import { LoadAccountByTokenRepository } from '@app/data/protocols/db/account/load-account-by-token-repository'
+import { AccountModel } from '@app/domain/models/account'
+import { LoadAccountByToken } from '@app/domain/usecases/load-account-by-token'
+import { Decrypter } from '@app/data/protocols/criptography/decrypter'
 
 export class DbLoadAccountByToken implements LoadAccountByToken {
   constructor (

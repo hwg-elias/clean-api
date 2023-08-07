@@ -1,3 +1,3 @@
-export * from '../protocols'
-export * from '../../domain/usecases/load-account-by-token'
-export * from '../../domain/models/account'
+export * from '@app/presentation/protocols'
+export * from '@app/domain/usecases/load-account-by-token'
+export * from '@app/domain/models/account'

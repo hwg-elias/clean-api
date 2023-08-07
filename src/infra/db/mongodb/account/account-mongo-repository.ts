@@ -1,10 +1,10 @@
-import { AddAccountRepository } from '../../../../data/protocols/db/account/add-account-repository'
-import { LoadAccountByEmailRepository } from '../../../../data/protocols/db/account/load-account-by-email-repository'
-import { UpdateAccessTokenRepository } from '../../../../data/protocols/db/account/update-access-token-repository'
-import { AccountModel } from '../../../../domain/models/account'
-import { AddAccountModel } from '../../../../domain/usecases/add-account'
-import { MongoHelper } from '../helpers/mongo-helper'
-import { LoadAccountByTokenRepository } from 'data/protocols/db/account/load-account-by-token-repository'
+import { AddAccountRepository } from '@app/data/protocols/db/account/add-account-repository'
+import { LoadAccountByEmailRepository } from '@app/data/protocols/db/account/load-account-by-email-repository'
+import { UpdateAccessTokenRepository } from '@app/data/protocols/db/account/update-access-token-repository'
+import { AccountModel } from '@app/domain/models/account'
+import { AddAccountModel } from '@app/domain/usecases/add-account'
+import { MongoHelper } from '@app/infra/db/mongodb/helpers/mongo-helper'
+import { LoadAccountByTokenRepository } from '@app/data/protocols/db/account/load-account-by-token-repository'
 
 export class AccountMongoRepository implements AddAccountRepository, LoadAccountByEmailRepository, UpdateAccessTokenRepository, LoadAccountByTokenRepository {
   async add (accountData: AddAccountModel): Promise<AccountModel> {

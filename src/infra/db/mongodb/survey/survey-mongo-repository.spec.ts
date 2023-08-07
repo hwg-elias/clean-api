@@ -1,8 +1,8 @@
 import { Collection } from 'mongodb'
-import { MongoHelper } from '../helpers/mongo-helper'
+import { MongoHelper } from '@app/infra/db/mongodb/helpers/mongo-helper'
 import { SurveyMongoRepository } from './survey-mongo-repository'
-import env from '../../../../main/config/env'
-import { AddSurveyModel } from '../../../../domain/usecases/add-survey'
+import env from '@app/main/config/env'
+import { AddSurveyModel } from '@app/domain/usecases/add-survey'
 import MockDate from 'mockdate'
 
 let surveyColletion: Collection

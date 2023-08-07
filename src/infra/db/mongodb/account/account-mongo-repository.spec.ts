@@ -1,7 +1,7 @@
 import { Collection } from 'mongodb'
-import { MongoHelper } from '../helpers/mongo-helper'
+import { MongoHelper } from '@app/infra/db/mongodb/helpers/mongo-helper'
 import { AccountMongoRepository } from './account-mongo-repository'
-import env from '../../../../main/config/env'
+import env from '@app/main/config/env'
 
 let accountCollection: Collection
 describe('Account Mongo Repository', () => {

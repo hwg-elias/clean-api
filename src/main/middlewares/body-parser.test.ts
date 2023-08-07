@@ -1,5 +1,5 @@
 import request from 'supertest'
-import app from '../config/app'
+import app from '@app/main/config/app'
 describe('Body Parser Middleware', () => {
   test('Should parse body as json', async () => {
     app.post('/test_body_parser', (req, res) => {

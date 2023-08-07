@@ -17,7 +17,7 @@ export default {
     '.+\\.ts$': 'ts-jest'
   },
   moduleNameMapper: {
-    '@/(.*)': '<rootDir>/src/$1'
+    '@app/(.*)': '<rootDir>/src/$1'
   }
 
 }
