@@ -53,7 +53,7 @@ describe('DbLoadSurveys', () => {
   afterAll(() => {
     MockDate.reset()
   })
-  test('Should return a list of surveys on success', async () => {
+  test('Should call LoadSurveysRepository', async () => {
     const { sut, loadSurveysRepositoryStub } = makeSut()
     const loadAllSpy = jest.spyOn(loadSurveysRepositoryStub, 'loadAll')
     await sut.load()
