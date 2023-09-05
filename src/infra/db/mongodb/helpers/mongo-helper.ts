@@ -22,18 +22,22 @@ export const MongoHelper = {
     return this.client.db().collection(name)
   },
 
-  map (collection: any): any {
-    if (!collection) return null
-    const { _id, ...collectionWithoutId } = collection
+  parseToObjectId (value: string): ObjectId {
+    return new ObjectId(value)
+  },
+
+  map (data: any): any {
+    if (!data) return null
+    const { _id, ...dataWithoutId } = data
 
     return Object.assign(
       {},
-      collectionWithoutId,
+      dataWithoutId,
       { id: _id.toHexString() }
     ) as AccountModel
   },
 
-  parseToObjectId (value: string): ObjectId {
-    return new ObjectId(value)
+  mapCollection (collection: any[]): any[] {
+    return collection.map(c => MongoHelper.map(c))
   }
 }
