@@ -8,20 +8,20 @@ import { ObjectId } from 'mongodb'
 
 export class SurveyMongoRepository implements AddSurveyRepository, LoadSurveysRepository, LoadSurveyById {
   async add (surveyData: AddSurveyModel): Promise<void> {
-    const surveyColletion = await MongoHelper.getCollection('surveys')
-    await surveyColletion.insertOne(surveyData)
+    const surveyCollection = await MongoHelper.getCollection('surveys')
+    await surveyCollection.insertOne(surveyData)
   }
 
   async loadAll (): Promise<SurveyModel[]> {
-    const surveyColletion = await MongoHelper.getCollection('surveys')
-    const surveys = await surveyColletion.find().toArray() as unknown as SurveyModel[]
+    const surveyCollection = await MongoHelper.getCollection('surveys')
+    const surveys = await surveyCollection.find().toArray() as unknown as SurveyModel[]
     return surveys
   }
 
   async loadById (id: string): Promise<SurveyModel> {
     const objectId = new ObjectId(id)
-    const surveyColletion = await MongoHelper.getCollection('surveys')
-    const survey = await surveyColletion.findOne({ _id: objectId }) as unknown as SurveyModel
+    const surveyCollection = await MongoHelper.getCollection('surveys')
+    const survey = await surveyCollection.findOne({ _id: objectId }) as unknown as SurveyModel
     return survey
   }
 }

@@ -5,7 +5,7 @@ import env from '@app/main/config/env'
 import { AddSurveyModel } from '@app/domain/usecases/add-survey'
 import MockDate from 'mockdate'
 
-let surveyColletion: Collection
+let surveyCollection: Collection
 
 const makeFakeSurveyData = (): AddSurveyModel => ({
   question: 'any_question',
@@ -34,21 +34,21 @@ describe('Survey Mongo Repository', () => {
     MockDate.reset()
   })
   beforeEach(async () => {
-    surveyColletion = await MongoHelper.getCollection('surveys')
-    await surveyColletion.deleteMany({})
+    surveyCollection = await MongoHelper.getCollection('surveys')
+    await surveyCollection.deleteMany({})
   })
 
   describe('add()', () => {
     test('Should add a survey on success', async () => {
       const sut = makeSut()
       await sut.add(makeFakeSurveyData())
-      const survey = await surveyColletion.findOne({ question: 'any_question' })
+      const survey = await surveyCollection.findOne({ question: 'any_question' })
       expect(survey).toBeTruthy()
     })
   })
   describe('loadAll()', () => {
     test('Should load all surveys on success', async () => {
-      await surveyColletion.insertMany([{
+      await surveyCollection.insertMany([{
         question: 'any_question',
         answers: [
           {
@@ -87,7 +87,7 @@ describe('Survey Mongo Repository', () => {
   })
   describe('loadById()', () => {
     test('Should load survey by id on success', async () => {
-      const res = await surveyColletion.insertOne({
+      const res = await surveyCollection.insertOne({
         question: 'any_question',
         answers: [
           {

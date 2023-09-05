@@ -3,8 +3,8 @@ import { MongoHelper } from '@app/infra/db/mongodb/helpers/mongo-helper'
 
 export class LogMongoRepository implements LogErrorRepository {
   async logError (stack: string): Promise<void> {
-    const errorColletion = await MongoHelper.getCollection('errors')
-    await errorColletion.insertOne({
+    const errorCollection = await MongoHelper.getCollection('errors')
+    await errorCollection.insertOne({
       stack,
       date: new Date()
     })
