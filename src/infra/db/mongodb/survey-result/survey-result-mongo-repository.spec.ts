@@ -98,11 +98,6 @@ describe('Survey Mongo Repository', () => {
       const survey = await makeSurvey()
       const account = await makeAccount()
       const res = await makeSurveyResult(survey, account)
-      console.log('RESPONSE', res.id)
-      console.log('RESPONSE', res.accountId)
-      console.log('RESPONSE', res.surveyId)
-      console.log('RESPONSE', res.answer)
-      console.log('RESPONSE', res.date)
 
       const sut = makeSut()
       const surveyResult = await sut.save({
