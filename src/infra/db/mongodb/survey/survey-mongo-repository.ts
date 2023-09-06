@@ -1,9 +1,9 @@
-import { AddSurveyModel } from '@app/domain/usecases/add-survey'
+import { AddSurveyModel } from '@app/domain/usecases/survey/add-survey'
 import { AddSurveyRepository } from '@app/data/protocols/db/survey/add-survey-repository'
 import { MongoHelper } from '@app/infra/db/mongodb/helpers/mongo-helper'
 import { SurveyModel } from '@app/domain/models/survey'
 import { LoadSurveysRepository } from '@app/data/protocols/db/survey/load-surveys-repository'
-import { LoadSurveyById } from '@app/domain/usecases/load-survey-by-id'
+import { LoadSurveyById } from '@app/domain/usecases/survey/load-survey-by-id'
 import { ObjectId } from 'mongodb'
 
 export class SurveyMongoRepository implements AddSurveyRepository, LoadSurveysRepository, LoadSurveyById {

@@ -4,7 +4,7 @@ import env from '@app/main/config/env'
 import MockDate from 'mockdate'
 import { SurveyModel } from '@app/domain/models/survey'
 import { AccountModel } from '@app/domain/models/account'
-import { SaveSurveyResultModel } from '@app/domain/usecases/save-survey-result'
+import { SaveSurveyResultModel } from '@app/domain/usecases/survey-result/save-survey-result'
 import { SurveyResultMongoRepository } from './survey-result-mongo-repository'
 import { SurveyResultModel } from '@app/domain/models/survey-result'
 
